@@ -62,6 +62,9 @@ allow platform_app preloads_media_file:dir r_dir_perms;
 
 read_runtime_log_tags(platform_app)
 
+# Reboot, needed in XenonOTA
+allow platform_app property_socket:sock_file write;
+
 ###
 ### Neverallow rules
 ###
